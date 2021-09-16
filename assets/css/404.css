@@ -1,0 +1,54 @@
+.easter-egg-icon {
+    display: block;
+    height: 125px;
+    position: absolute;
+    right: -125px;
+    bottom: 0px;
+    padding-bottom: 75px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.error-description:hover ~ .easter-egg-icon,
+.easter-egg-icon:hover {
+    transform: translateX(-125px);
+    padding-left: 150px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: var(--dark-color);
+}
+
+#game-board {
+    background-color: #CCC;
+    width: 100vmin;
+    height: 100vmin;
+    display: grid;
+    grid-template-rows: repeat(21, 1fr);
+    grid-template-columns: repeat(21, 1fr);
+}
+
+.snake {
+    background-color: limegreen;
+}
+
+.snake.head {
+    background-image: url('https://assets.roomsthegame.com/snake/assets/head.png');
+    background-color: #00000000;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.food {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('https://assets.roomsthegame.com/snake/assets/food.png');
+}

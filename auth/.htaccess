@@ -1,0 +1,54 @@
+DirectoryIndex login.php
+
+AddDefaultCharset UTF-8   
+DefaultLanguage fr-fr
+
+Header set Origin "https://auth.roomsthegame.com"
+Header add Vary "Accept-Encoding"
+Header add Vary "Origin"
+
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-XSS-Protection "1; mode=block"
+Header always set Content-Security-Policy "upgrade-insecure-requests"
+Header always set Strict-Transport-Security "max-age=600; includeSubDomains"
+Header always set X-Frame-Options SAMEORIGIN
+ 
+Header set Referrer-Policy "no-referrer"
+
+ErrorDocument 400 https://errors.roomsthegame.com/400
+ErrorDocument 401 /home/paesgi2021g1/www/errors/errors?e=401
+ErrorDocument 402 https://errors.roomsthegame.com/402
+ErrorDocument 403 https://errors.roomsthegame.com/403
+ErrorDocument 404 https://errors.roomsthegame.com/404
+ErrorDocument 405 https://errors.roomsthegame.com/405
+ErrorDocument 406 https://errors.roomsthegame.com/406
+ErrorDocument 407 https://errors.roomsthegame.com/407
+ErrorDocument 408 https://errors.roomsthegame.com/408
+ErrorDocument 409 https://errors.roomsthegame.com/409
+ErrorDocument 410 https://errors.roomsthegame.com/410
+ErrorDocument 411 https://errors.roomsthegame.com/411
+ErrorDocument 412 https://errors.roomsthegame.com/412
+ErrorDocument 413 https://errors.roomsthegame.com/413
+ErrorDocument 414 https://errors.roomsthegame.com/414
+ErrorDocument 415 https://errors.roomsthegame.com/415
+
+ErrorDocument 500 https://errors.roomsthegame.com/500
+ErrorDocument 501 https://errors.roomsthegame.com/501
+ErrorDocument 502 https://errors.roomsthegame.com/502
+ErrorDocument 503 https://errors.roomsthegame.com/503
+ErrorDocument 504 https://errors.roomsthegame.com/504
+ErrorDocument 505 https://errors.roomsthegame.com/505
+
+RewriteEngine On
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
+RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^/?(.*)$ /$1.php [L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.html
+RewriteRule ^/?(.*)\.html$ /$1 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^/?(.*)$ /$1.html [L]

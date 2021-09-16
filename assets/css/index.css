@@ -1,0 +1,452 @@
+@import url("https://assets.roomsthegame.com/css/base.css");
+
+main section.first .middle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+main section.first .bottom {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  bottom: 30px;
+  width: 100%;
+}
+
+main section.first .bottom .scroll-indicator {
+  margin-top: 15px;
+  -webkit-animation: shine 2s infinite ease;
+  -moz-animation: shine 2s infinite ease;
+  -o-animation: shine 2s infinite ease;
+  animation: shine 2s infinite ease;
+}
+
+main section.first .logo {
+  height: 300px;
+}
+
+main section.second {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--light-color);
+    font-weight: 800;
+}
+
+main section.second .top{
+    font-size: 4rem;
+    margin-top: 35px;
+    text-align: center;
+}
+
+main section.second .bottom {
+    margin: 0 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section.second .bottom .left {
+    width: 60%;
+}
+
+main section.second .bottom .left img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+main section.second .bottom .right {
+    width: 40%;
+    padding: 20px;
+    font-size: 1.25rem;
+    line-height: 30px;
+    text-align: justify;
+}
+
+main section.third {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--light-color);
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+main section.third .top {
+  margin-top: 35px;
+}
+
+main section.third .middle {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  position: relative;
+  height: 500px;
+  width: 960px;
+  overflow: hidden;
+}
+
+.slider-content {
+  display: flex;
+  flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  align-items: center;
+  position: absolute;
+  perspective: 700px;
+  transform-style: preserve-3d;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  height: 80%;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  flex: 0 0 100%;
+  -ms-flex: 0 0 100%; /* for IE */
+  align-items: center;
+  justify-content: center;
+  transition: transform 320ms ease-in-out, opacity 360ms linear;
+  transform-origin: center center;
+  transform: translate3d(250px, 0, 0);
+  background-color: white;
+  transform-style: preserve-3d;
+  text-align: center;
+  padding: 15px;
+  border: var(--secondary-color-light) 10px solid;
+}
+
+.slide img {
+  height: 95%;
+}
+
+main section.third .bottom {
+  margin-bottom: 75px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main section.third .bottom .btn-primary {
+  width: 110px !important;
+}
+
+section.third .active-card-indicator {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 100px;
+}
+
+.active-card-indicator .indicator {
+  display: block;
+  background-color: var(--gray-color);
+  width: 60px;
+  height: 5px;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+body.lightmode .active-card-indicator .indicator {
+  background-color: var(--light-color);
+}
+
+body.lightmode .active-card-indicator .indicator.active,
+.active-card-indicator .indicator.active {
+  background-color: var(--primary-color-dark);
+  width: 80px;
+  height: 9px;
+}
+
+footer.default-footer {
+  display: flex;
+}
+
+footer {
+  color: var(--light-color);
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  background-color: var(--primary-color-dark);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  min-height: 405px;
+}
+
+footer .top {
+  min-height: 330px;
+  border-bottom: 1px var(--light-color) solid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 150px;
+}
+
+footer .top .ftr-top-left {
+  height: 280px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+footer .logo {
+  height: 250px;
+}
+
+footer .top .ftr-top-right {
+  height: 280px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.ftr-link {
+  display: flex;
+  height: 56px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-color);
+  font-family: "Gilroy", "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.ftr-link > img {
+  margin-right: 8px;
+  width: 22px;
+  height: 22px;
+}
+
+.ftr-link.btn-left-img > img {
+  margin-left: 8px;
+  margin-right: 0;
+  width: 22px;
+  height: 22px;
+}
+
+footer .bottom {
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+}
+
+@media (max-width: 575.98px) {
+  main section.first .logo {
+    height: 120px;
+  }
+
+  main section.second .bottom {
+    margin: 0 30px;
+    flex-direction: column;
+  }
+
+  main section.second .bottom .left,
+  main section.second .bottom .right {
+    width: 100%;
+  }
+
+  .slider {
+    height: 300px;
+    width: 300px;
+  }
+
+  .slide {
+    width: 120px;
+  }
+
+  main section.third .bottom {
+    margin-bottom: 0;
+    margin: 25px 0 50px 0;
+  }
+
+  section.third .active-card-indicator {
+    margin: 20px 0;
+  }
+
+  .active-card-indicator .indicator {
+    width: 40px;
+  }
+
+  body.lightmode .active-card-indicator .indicator.active,
+  .active-card-indicator .indicator.active {
+    background-color: var(--primary-color-dark);
+    width: 50px;
+    height: 9px;
+  }
+
+  main section.third .bottom {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  footer .top {
+    flex-direction: column;
+  }
+
+  footer .top .ftr-top-right,
+  footer .top .ftr-top-left {
+    align-items: center;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  main section.first .logo {
+    height: 180px;
+  }
+
+  main section.second .bottom {
+    margin: 0 30px;
+    flex-direction: column;
+  }
+
+  main section.second .bottom .left,
+  main section.second .bottom .right {
+    width: 100%;
+  }
+
+  .slider {
+    height: 400px;
+    width: 500px;
+  }
+
+  .slide {
+    width: 200px;
+  }
+
+  section.third .active-card-indicator {
+    margin: 20px 0;
+  }
+
+  main section.third .bottom {
+    flex-direction: column-reverse;
+  }
+
+  footer .top {
+    flex-direction: column;
+  }
+
+  footer .top .ftr-top-right,
+  footer .top .ftr-top-left {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  main section.first .logo {
+    height: 180px;
+  }
+
+  .slider {
+    height: 400px;
+    width: 700px;
+  }
+
+  .slide {
+    width: 250px;
+  }
+
+  section.third .active-card-indicator {
+    margin: 20px 0;
+  }
+
+  main section.third .bottom {
+    flex-direction: column-reverse;
+  }
+
+  footer .top {
+    flex-direction: column;
+  }
+
+  footer .top .ftr-top-right,
+  footer .top .ftr-top-left {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  section.third .active-card-indicator {
+    margin: 0 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (max-height: 400px) {
+  main section.first .bottom {
+    bottom: -100px;
+  }
+
+  .slider {
+    height: 150px;
+    width: 300px;
+  }
+
+  .slide {
+    width: 100px;
+  }
+
+  main section.third .top {
+    margin-top: 10px;
+  }
+
+  main section.third .bottom {
+    margin-bottom: 0;
+    margin: 25px 0 50px 0;
+  }
+}

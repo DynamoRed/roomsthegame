@@ -1,0 +1,170 @@
+@import url('https://assets.roomsthegame.com/css/base.css');
+
+.error-main {
+    position: absolute;
+    color: var(--light-color);
+    font-family: 'NEON', sans-serif !important;
+    font-size: 300px;
+    text-align: center;
+    text-decoration: none;
+    width: 600px;
+    height: 300px;
+    line-height: 300px;
+    left: 50%;
+    top: 50%;
+    margin-left: -300px;
+    margin-top: -150px;
+    animation: blindingBlur 5s linear infinite;
+    -o-animation: blindingBlur 5s linear infinite;
+    -moz-animation: blindingBlur 5s linear infinite;
+    -webkit-animation: blindingBlur 5s linear infinite;
+}
+
+.first-number,
+.second-number,
+.third-number {
+    display:inline-block;
+}
+
+.error-description {
+    position: absolute;
+    color: var(--gray-color);
+    font-family: 'Gilroy', "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    text-align: right;
+    text-decoration: none;
+    height: 28px;
+    line-height: 28px;
+    bottom: 20px;
+    right: 20px;
+}
+
+.btn-primary {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+@media screen and (max-width: 620px){
+    body{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .error-main{
+        font-size: 200px;
+        line-height: 200px;
+        height: 200px;
+        width: 100%;
+        margin-top: -100px;
+        margin-left: -50%;
+    }
+
+    .error-description{
+        right: initial;
+        bottom: initial;
+        top: 50%;
+        margin-top: 90px;
+    }
+
+    .btn-primary {
+        bottom: initial;
+        top: 20px;
+        width: 80%;
+        left: 10%;
+        padding: 0;
+    }
+}
+
+.error-plain-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Gilroy", "Montserrat", sans-serif;
+    color: var(--light-color);
+}
+
+.error-plain-container > .logo {
+    height: 400px;
+    margin-top: -90px;
+}
+
+.error-plain-container > .error-plain-description {
+    display: flex;
+    width: 760px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-plain-description > h3 {
+    line-height: 32px;
+    font-size: 32px;
+    font-weight: 500px;
+    text-align: center;
+}
+
+.error-plain-description > span {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600px;
+    text-align: center;
+    color: var(--gray-color);
+    margin: 18px;
+}
+
+form#loginForm .auth-main-separator {
+    height: 2px;
+    background-color: var(--gray-color);
+    color: var(--gray-color);
+    width: 450px;
+    margin: 30px 0 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+  
+form#loginForm .auth-main-separator span {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    height: 25px;
+    width: 340px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: var(--dark-color);
+}
+
+form#loginForm .auth-main-separator span.developer-auth {
+    color: var(--primary-color);
+}
+
+form#loginForm .auth-main-classic {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+form#loginForm .auth-main-classic .auth-input {
+    width: 350px;
+    height: 35px;
+    outline: none;
+    background-color: var(--dark-color);
+    border: var(--light-color) 3px solid;
+    border-radius: 80px;
+    margin-bottom: 15px;
+    color: var(--light-color);
+    padding: 0 15px;
+    font-family: "Gilroy", "Montserrat", sans-serif;
+}

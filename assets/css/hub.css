@@ -1,0 +1,76 @@
+@import url("https://assets.roomsthegame.com/css/base.css");
+
+body {
+    background-color: var(--secondary-color);
+}
+
+.parties-container {
+    top: 80px;
+    padding: 20px 30px;
+    position: absolute;
+    width: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.party-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-color);
+    box-shadow: 3px 3px 4px var(--dark-color);
+    width: 500px;
+    margin: 15px;
+    padding: 15px;
+    max-height: 65px;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.parties-container .owner {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.parties-container .owner a {
+    margin-left: 5px;
+    font-weight: normal;
+    color: var(--dark-color);
+}
+
+.parties-container span {
+    font-weight: bold;
+}
+
+.parties-container .owner img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.btn-join {
+    padding: 0 25px;
+}
+
+@media (max-width: 575.98px) {
+    .party-container {
+       width: 300px;
+    }
+}
+  
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1200px) {
+}

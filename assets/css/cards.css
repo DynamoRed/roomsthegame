@@ -1,0 +1,100 @@
+:root{
+    --card-size: 320px;
+}
+
+.plate-card {
+    background-image: url("https://assets.roomsthegame.com/images/gcomponents/rooms/rooms.png");
+    background-size: calc(var(--card-size) * 5) calc(var(--card-size) * 6);
+    background-position: calc(var(--card-size) * 0) calc(var(--card-size) * -5);
+    width: var(--card-size);
+    height: var(--card-size);
+    transition: transform .5s;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.plate-card .plate-card-infos {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 95%;
+    max-height: 75%;
+    transition: opacity .5s;
+    background-color: var(--secondary-color-light);
+    overflow-y: scroll;
+    padding: 5px 5px;
+}
+
+.plate-card-infos h1 {
+    font-size: 0.7rem;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    color: var(--light-color);
+}
+
+.plate-card-infos p {
+    font-size: 0.5rem;
+    font-weight: 400;
+    color: var(--gray-color);
+}
+
+.plate-card:hover .plate-card-infos {
+    opacity: 1;
+}
+
+.plate-card:hover {
+    z-index: 6;
+    transform: scale(2);
+    box-shadow: 0px 0px 10px var(--primary-color);
+}
+
+.plate-card.active {
+    transform: rotateY(180deg);
+}
+
+.plate-card.active:hover{
+    transform: scale(2) rotateY(180deg);
+}
+
+.plate-card.active .plate-card-infos{
+    transform: rotateY(-180deg);
+}
+
+.plate-card:hover:active .plate-card-infos {
+    opacity: 0;
+}
+
+.plate-card-infos::-webkit-scrollbar {
+    display: none;
+}
+
+.plate-card[card_type='central_room'] { background-position: calc(var(--card-size) * 0) calc(var(--card-size) * 0); }
+.plate-card[card_type='exit_room'] { background-position: calc(var(--card-size) * 0) calc(var(--card-size) * -3); }
+.plate-card[card_type='empty_room'] { background-position: calc(var(--card-size) * -1) calc(var(--card-size) * 0); }
+.plate-card[card_type='vision_room'] { background-position: calc(var(--card-size) * -3) calc(var(--card-size) * 0); }
+.plate-card[card_type='tunnel_room'] { background-position: calc(var(--card-size) * -2) calc(var(--card-size) * -1); }
+.plate-card[card_type='jamming_room'] { background-position: calc(var(--card-size) * -3) calc(var(--card-size) * -4); }
+.plate-card[card_type='cold_room'] { background-position: calc(var(--card-size) * 0) calc(var(--card-size) * -2); }
+.plate-card[card_type='vortex_room'] { background-position: calc(var(--card-size) * -2) calc(var(--card-size) * 0); }
+.plate-card[card_type='jail_room'] { background-position: calc(var(--card-size) * 0) calc(var(--card-size) * -1); }
+.plate-card[card_type='mirrors_room'] { background-position: calc(var(--card-size) * -1) calc(var(--card-size) * -3); }
+.plate-card[card_type='dark_room'] { background-position: calc(var(--card-size) * -4) calc(var(--card-size) * -1); }
+.plate-card[card_type='mortal_room'] { background-position: calc(var(--card-size) * -3) calc(var(--card-size) * -2); }
+.plate-card[card_type='moving_room'] { background-position: calc(var(--card-size) * -1) calc(var(--card-size) * -1); }
+.plate-card[card_type='time_room'] { background-position: calc(var(--card-size) * -4) calc(var(--card-size) * -3); }
+.plate-card[card_type='acid_room'] { background-position: calc(var(--card-size) * -2) calc(var(--card-size) * -2); }
+.plate-card[card_type='flooded_room'] { background-position: calc(var(--card-size) * -3) calc(var(--card-size) * -1); }
+.plate-card[card_type='torment_room'] { background-position: calc(var(--card-size) * -1) calc(var(--card-size) * -2); }
+.plate-card[card_type='illusion_room'] { background-position: calc(var(--card-size) * -4) calc(var(--card-size) * -2); }
+.plate-card[card_type='paranoia_room'] { background-position: calc(var(--card-size) * -1) calc(var(--card-size) * -4); }

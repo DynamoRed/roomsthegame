@@ -1,0 +1,298 @@
+@import url("https://assets.roomsthegame.com/css/base.css");
+
+.auth-main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Gilroy", "Montserrat", sans-serif;
+  color: var(--light-color);
+}
+
+input {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+input::-moz-selection {
+  background: var(--primary-color-dark);
+  color: var(--light-color);
+}
+
+input::selection {
+  background: var(--primary-color-dark);
+  color: var(--light-color);
+}
+
+.auth-step {
+  display: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Gilroy", "Montserrat", sans-serif;
+  color: var(--light-color);
+}
+
+.auth-step.visible {
+  display: flex;
+}
+
+.auth-main img.logo {
+  height: 250px;
+}
+
+.auth-main .oauth2-auth {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 375px;
+}
+
+.oauth2-auth a.oauth2-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 35px;
+  background-color: var(--light-color);
+  border-radius: 32px;
+}
+
+.oauth2-auth a.oauth2-button > img {
+  width: 26px;
+  height: 26px;
+  fill: var(--light-color);
+}
+
+.auth-main .auth-main-separator {
+  height: 2px;
+  background-color: var(--gray-color);
+  color: var(--gray-color);
+  width: 350px;
+  margin: 30px 0 17.5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-main .auth-main-separator span {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  height: 25px;
+  width: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--dark-color);
+}
+
+.auth-main .auth-main-step {
+  color: var(--gray-color);
+  width: 375px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 17.5px;
+}
+
+.auth-main .auth-main-step span {
+  font-size: 18px;
+  font-weight: 800 !important;
+  height: 25px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.auth-main form .auth-main-classic {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-main-classic .auth-input {
+  width: 375px;
+  height: 35px;
+  outline: none;
+  background-color: var(--dark-color);
+  border: var(--light-color) 3px solid;
+  border-radius: 80px;
+  margin-bottom: 15px;
+  color: var(--light-color);
+  padding: 0 15px;
+  font-family: "Gilroy", "Montserrat", sans-serif;
+}
+
+.auth-main-classic .double-auth {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-main-classic .double-auth-input {
+  height: 35px;
+  width: 50px;
+  outline: none;
+  background-color: var(--dark-color);
+  border: var(--light-color) 3px solid;
+  border-radius: 80px;
+  color: var(--light-color);
+  margin: 0 7.5px 15px;
+  text-align: center;
+  line-height: 24px;
+  font-size: 24px;
+}
+
+.auth-main-classic .double-auth-input.disabled {
+  border: var(--gray-color) 3px solid;
+  cursor: not-allowed;
+}
+
+.auth-main-classic .auth-submit,
+.auth-main-classic .auth-next-step {
+  margin-top: 20px;
+}
+
+.auth-main-classic .auth-next-step-container {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.auth-backto {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.auth-main-classic .auth-missed {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 300;
+  width: 375px;
+  margin-top: -5px;
+}
+
+.auth-main-classic .auth-missed > a {
+  color: var(--gray-color);
+}
+
+.auth-main-classic .auth-missed > a:hover {
+  color: var(--light-color);
+}
+
+.auth-main .auth-hdr-logo {
+  position: absolute;
+  top: 0;
+  left: 150px;
+}
+
+.auth-main .auth-hdr-logo > img.logo {
+  height: 75px;
+}
+
+.auth-captcha-title {
+  margin-top: 30px;
+  font-weight: 400;
+}
+
+.auth-main-classic .auth-captcha {
+  width: 300px;
+  border: var(--light-color) 3px solid;
+  border-radius: 16px;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.auth-captcha .captcha-img-selector {
+  width: 92px;
+  height: 92px;
+  border: var(--dark-color) 4px solid;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-captcha .captcha-img-selector img {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.auth-captcha .captcha-img-selector.selected{
+  border: var(--primary-color-dark) 4px solid;
+}
+
+@media (max-width: 575.98px) {
+  .auth-main img.logo {
+    height: 125px;
+  }
+
+  .auth-main-classic .auth-input {
+    width: 300px;
+  }
+
+  .auth-backto {
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+  }
+
+  .auth-main .auth-hdr-logo {
+    left: 50px;
+  }  
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .auth-main img.logo {
+    height: 230px;
+  }
+
+  .auth-main .auth-hdr-logo {
+    left: 50px;
+  }  
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .auth-main .auth-hdr-logo {
+    left: 50px;
+  }  
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

@@ -1,0 +1,5 @@
+Discord:
+https://discord.com/api/oauth2/authorize?client_id=826371471449522176&redirect_uri=https%3A%2F%2Fauth.roomsthegame.com%2Foauth%2Fdiscord%2Ftoken&response_type=code&scope=identify%20email%20activities.write%20connections
+
+Facebook:
+https://graph.facebook.com/oauth/access_token?client_id={your-app-id}&client_secret={your-app-secret}&grant_type=client_credentials
